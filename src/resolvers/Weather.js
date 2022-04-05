@@ -8,7 +8,7 @@ module.exports = {
   Weather: {
     main: ({ weather }) => {
       const data = weather[0];
-      return data.main;
+      return String(data.main).toLowerCase();
     },
     description: ({ weather }) => {
       const data = weather[0];

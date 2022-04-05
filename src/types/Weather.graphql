@@ -1,5 +1,5 @@
 type Weather {
-  main: String
+  main: String @translate
   description: String
   temp: String
   feelsLike: String 

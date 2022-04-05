@@ -1,20 +1,20 @@
 {
-    "en-us": [
+    "en_us": [
         {
-            "key": "feeling.positive",
-            "value": "positive"
+            "key": "clear",
+            "value": "clear"
         }
     ],
-    "pt-br": [
+    "pt_br": [
         {
-            "key": "feeling.positive",
-            "value": "positiv"
+            "key": "clear",
+            "value": "limpo"
         }
     ],
-    "es-es": [
+    "es_es": [
         {
-            "key": "feeling.positive",
-            "value": "positivo"
+            "key": "clear",
+            "value": "claro"
         }
     ]
 }
