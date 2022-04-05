@@ -1,0 +1,17 @@
+type Weather {
+  main: String
+  description: String
+  temp: String
+  feelsLike: String 
+  tempMin: String
+  tempMax: String
+}
+
+input Coordinates {
+  lat: Float!
+  lon: Float!
+}
+
+type Query {
+  getWeatherByGeoLocation(coordinates: Coordinates!): Weather
+}

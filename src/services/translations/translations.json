@@ -1,0 +1,20 @@
+{
+    "en-us": [
+        {
+            "key": "feeling.positive",
+            "value": "positive"
+        }
+    ],
+    "pt-br": [
+        {
+            "key": "feeling.positive",
+            "value": "positiv"
+        }
+    ],
+    "es-es": [
+        {
+            "key": "feeling.positive",
+            "value": "positivo"
+        }
+    ]
+}
