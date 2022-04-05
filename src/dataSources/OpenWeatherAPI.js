@@ -1,4 +1,5 @@
 const { RESTDataSource } = require('apollo-datasource-rest');
+const headers = require('../utils/headers');
 
 class OpenWeatherAPI extends RESTDataSource {
   constructor() {
@@ -11,27 +12,22 @@ class OpenWeatherAPI extends RESTDataSource {
   }
 
   willSendRequest(request) {
-    request.params.set('appid', 'b93314736b966308a6e97695cf8b75c3');
+    request.params.set('appid', process.env.OPEN_WEATHER_API_KEY);
+
+    const acceptLanguage = headers.acceptLanguage(this.context.headers);
+    request.params.set('lang', acceptLanguage);
   }
 
   async getWeather({ lat, lon }) {
     const encondedLat = `${encodeURIComponent(lat)}`;
     const encondedLon = `${encodeURIComponent(lon)}`;
 
-    console.log({
-      encondedLat,
-      encondedLon,
-    });
-
-    const result = await this.get(`weather?lat=${encondedLat}&lon=${encondedLon}`);
-
-    if (result) {
+    try {
+      const result = await this.get(`weather?lat=${encondedLat}&lon=${encondedLon}`);
       return result;
+    } catch (error) {
+      return error;
     }
-
-    throw Error({
-      err: 'objeto nao encontrado',
-    });
   }
 }
 

@@ -1,5 +1,7 @@
 const { ApolloServer } = require('apollo-server');
 
+require('dotenv').config();
+
 const resolvers = require('./resolvers');
 const types = require('./types');
 
