@@ -5,6 +5,7 @@ type Weather {
   feelsLike: String 
   tempMin: String
   tempMax: String
+  location: String
 }
 
 input Coordinates {

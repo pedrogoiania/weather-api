@@ -18,5 +18,6 @@ module.exports = {
     feelsLike: ({ main }) => main.feels_like,
     tempMin: ({ main }) => main.temp_min,
     tempMax: ({ main }) => main.temp_max,
+    location: ({ name }) => name,
   },
 };
