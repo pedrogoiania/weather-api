@@ -6,6 +6,7 @@ type Weather {
   tempMin: String
   tempMax: String
   location: String
+  icon: String
 }
 
 input Coordinates {

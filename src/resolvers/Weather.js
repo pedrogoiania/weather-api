@@ -14,6 +14,19 @@ module.exports = {
       const data = weather[0];
       return data.description;
     },
+    icon: ({ weather }) => {
+      const data = weather[0];
+      const iconsEnum = {
+        '01d': 'clearSky',
+        '01n': 'clearSkyNight',
+        '02d': 'fewClouds',
+        '02n': 'fewCloudsNight',
+        '03d': 'scatteredClouds',
+        '03n': 'scatteredCloudsNight',
+      };
+
+      return iconsEnum[data.icon];
+    },
     temp: ({ main }) => main.temp,
     feelsLike: ({ main }) => main.feels_like,
     tempMin: ({ main }) => main.temp_min,

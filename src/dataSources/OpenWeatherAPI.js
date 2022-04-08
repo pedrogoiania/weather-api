@@ -13,6 +13,7 @@ class OpenWeatherAPI extends RESTDataSource {
 
   willSendRequest(request) {
     request.params.set('appid', process.env.OPEN_WEATHER_API_KEY);
+    request.params.set('units', 'metric');
 
     const acceptLanguage = headers.acceptLanguage(this.context.headers);
     request.params.set('lang', acceptLanguage);
